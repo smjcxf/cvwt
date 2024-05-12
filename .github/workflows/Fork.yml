@@ -18,16 +18,16 @@ jobs:
     - name: Checkout target repository
       uses: actions/checkout@v4.1.0
       with:
-        repository: smjcxf/CloudflareST
-        path: CloudflareST-repo
+        repository: smjcxf/cvwt
+        path: cvwt-repo
 
 ######
     - name: Download files to GeoIP
       run: |
         
-        curl -L -o CloudflareST-repo/Country.mmdb "https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-Country.mmdb"
+        curl -L -o cvwt-repo/Country.mmdb "https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-Country.mmdb"
 
-        cd CloudflareST-repo
+        cd cvwt-repo
         if [[ -n $(git status -s) ]]; then
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
