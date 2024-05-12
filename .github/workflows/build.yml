@@ -89,10 +89,10 @@ jobs:
 
       - name: Copy additional files
         run: |
-          cp ${GITHUB_WORKSPACE}/Country.mmdb ./build_assets/Country.mmdb
-          cp ${GITHUB_WORKSPACE}/ip.txt ./build_assets/ip.txt
-          cp ${GITHUB_WORKSPACE}/ipv6.txt ./build_assets/ipv6.txt
-          cp ${GITHUB_WORKSPACE}/README.md ./build_assets/README.md
+          cp /Country.mmdb ./build_assets/Country.mmdb
+          cp /ip.txt ./build_assets/ip.txt
+          cp /ipv6.txt ./build_assets/ipv6.txt
+          cp /README.md ./build_assets/README.md
 
       - name: Create ZIP archive for non-Windows
         if: matrix.goos != 'windows'
